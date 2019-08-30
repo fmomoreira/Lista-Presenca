@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset='utf8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Svelte app</title>
+    <link rel='icon' type='image/png' href='/favicon.png'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel='stylesheet' href='/bundle.css'>
+  </head>
+
+  <body>
+    <script src='/bundle.js'></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.5.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBpsOCoPCCthwUqq6m5Z0h2RZrvCAXpcCs",
+    authDomain: "loshope-88be6.firebaseapp.com",
+    databaseURL: "https://loshope-88be6.firebaseio.com",
+    projectId: "loshope-88be6",
+    storageBucket: "",
+    messagingSenderId: "113045594084",
+    appId: "1:113045594084:web:26ea82ad82e8f2b5"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+ <script>
+window.onload = function () { 
+  let totalp = document.querySelector("#totalpessoas");
+let conta = totalp.getElementsByTagName('td');
+let totalarray = conta.length;
+let divisor = "3";
+let quantosvao = (totalarray/divisor);
+document.getElementById("resultadofinal").innerHTML =(quantosvao);
+ } 
+</script>
+  </body>
+</html>
